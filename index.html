@@ -1,0 +1,11 @@
+---
+layout: home
+---
+<ul class="list-unstyled">
+      {% for post in paginator.posts %}
+      <li>
+            <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><i datetime="{{ post.date | date_to_xmlschema }}" class="time" itemprop="datePublished"> » {{ post.date | date: "%B %d, %Y" }}</i></h4>
+            <p class="">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 80 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 80 }}{% endif %}</p>
+      </li>
+      {% endfor %}
+</ul>

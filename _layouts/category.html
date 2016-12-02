@@ -1,0 +1,17 @@
+{% include header.html %}
+<div class="container">
+    {% include main_right.html %}
+        <div class="col-lg-9" id="main_left">            
+            {% include search.html %}
+            <ul class="list-unstyled">
+                  {% for post in site.categories[page.category_identifier] %}
+                  <li>
+			<h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+                        <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
+                        <p class="">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
+                  </li>
+                  {% endfor %}
+            </ul>
+        </div>
+</div>
+{% include footer.html %}

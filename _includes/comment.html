@@ -1,0 +1,21 @@
+<p class="disqus-notice">
+    <a class="btn btn-default" href="javascript:disqus.load();">点击以加载 Disqus 评论框</a> 如果评论框加载不出来，想办法翻越GFW吧、
+</p>
+<aside class="disqus">
+<div id="disqus_thread"></div>
+</aside>
+<script type="text/javascript">
+var disqus = {
+    load: function disqus() {
+        var disqus_shortname = '{{ site.owner.disqus }}';
+        if (typeof DISQUS !== 'object') {
+         (function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+            $('.disqus-notice').remove(); ///加载后移除按钮
+        }
+    }
+}
+</script>

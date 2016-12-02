@@ -1,0 +1,50 @@
+<div class="col-lg-3" id="main_right">
+    <div id='about' style="margin-bottom: 20px">
+        <p>
+            <img src='{{site.url}}/public/images/profile.png' id="profile"/>
+        </p>
+    </div>
+    <div>
+        <h4>Ray Cheng</h4>
+        <p id="about">Laravel Developer, Remote Worker, Freelancer..</p>
+    </div>
+    <div class="social">
+        <ul>
+            {% for link in site.social %}
+                <li><a href="{{ link.link }}" target="_blank"><i class="fa {{ link.icon }}"></i></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <form style="display: inline" onsubmit="return false">
+                <input type="text" tabindex="4" name="q" placeholder="~$ type to search" autocomplete="off" class="form-control" id="search-query">
+          </form>
+    </div>
+    {% include search.html %}
+    <hr />
+    <div>
+        <h4>Navigation</h4>
+        &nbsp;&nbsp; » <a href="/">Home</a>
+        <br />
+        &nbsp;&nbsp; » <a href="/posts/about.html" id='cv'>CV</a>
+    </div>
+    <div id='category'>
+          <h4>Tags</h4>
+          <div id="tags">
+                {% for link in site.links %}
+                <a href="{{site.url}}/{{ link.url }}" target="_blank"><span class="label label-default">{{ link.title }}</span></a>
+                {% endfor %}
+            </ul>
+          </div>
+    </div>
+    <br />
+    <div id="licence">
+        <a class="github-button" href="https://github.com/akulubala/akulubala.github.io" data-icon="octicon-star" data-count-href="/akulubala/akulubala.github.io/stargazers" data-count-api="/repos/akulubala/akulubala.github.io#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star akulubala/akulubala.github.io on GitHub">Star</a>
+        <br />
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/akulubala" data-count-href="/akulubala/followers" data-count-api="/users/akulubala#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @akulubala on GitHub">Follow @akulubala</a>
+        <!-- Place this tag where you want the button to render. -->
+        <br />
+        - Powered by Jekyll
+    </div>
+</div>

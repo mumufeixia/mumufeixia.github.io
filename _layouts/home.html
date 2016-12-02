@@ -1,0 +1,9 @@
+{% include header.html %}
+<div class="container">        
+        {% include main_right.html %}
+        <div class="col-lg-9" id="main_left">            
+            {{ content }}
+            {% include pagination.html %}
+        </div>        
+</div>
+{% include footer.html %}

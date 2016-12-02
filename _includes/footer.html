@@ -1,0 +1,52 @@
+<a id="return_top" onclick="window.scrollTo(0,0);return false;" title="返回顶部"></a>
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+{{#entries}}
+  <article>
+    <h6>
+      <a href="{{url}}">{{title}}</a>
+      {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+    </h6>
+  </article>
+{{/entries}}
+</script>
+{% endraw %}
+<script>
+ // lunr search
+ $(function() {
+	$('#search-query').lunrSearch({
+	 indexUrl: '{{site.url}}/search.json',             // URL of the `search.json` index data for your site
+	 results:  '#search_results',          // jQuery selector for the search results container
+	 entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+	 template: '#search-results-template'  // jQuery selector for the Mustache.js template		    
+        });
+		  
+});
+// return top
+$(function(){
+        var bt = $('#return_top');
+        $(window).scroll(function() {
+                var st = $(window).scrollTop();
+                if(st > 30){
+                        bt.css("top",($(window).height())-60);
+                        bt.show();
+                }else{
+                        bt.hide();
+                }
+        });
+})
+$(document).ready(function() {
+  var ln = '';
+  $.getJSON('https://freegeoip.net/json/', function(result) {
+    ln = result.country_code;
+  });
+
+  if (ln != 'CN') {
+    $('#cv').attr('href', '/posts/about-cn.html');
+  }
+
+})
+
+</script>
+</body>
+</html>
