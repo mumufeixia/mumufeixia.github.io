@@ -16,7 +16,7 @@ owner:
   stackoverflow: http://stackoverflow.com/users/****
   tsina:          http://weibo.com/u/****
   weixin:         http://***.jpg
-  disqus:         **** 
+  #disqus:         **** 
 social:
     - icon: fa-weixin
       link: "http://mumufeixia.github.io/public/images/wechat.jpg"
