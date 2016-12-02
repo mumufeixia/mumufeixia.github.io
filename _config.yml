@@ -13,21 +13,21 @@ owner:
   name:           Liu Lin
   email:          liulin8796@126.com
   github:         https://github.com/mumufeixia
-  stackoverflow: http://stackoverflow.com/users/****
-  tsina:          http://weibo.com/u/****
-  weixin:         http://***.jpg
+  #stackoverflow: http://stackoverflow.com/users/****
+  #tsina:          http://weibo.com/u/****
+  #weixin:         http://***.jpg
   #disqus:         **** 
 social:
-    - icon: fa-weixin
-      link: "http://mumufeixia.github.io/public/images/wechat.jpg"
-    - icon: fa-weibo
-      link: "http://weibo.com/u/2830658314"
-    - icon: fa-twitter
-      link: "https://twitter.com/akulubala"
+    #- icon: fa-weixin
+     # link: "http://mumufeixia.github.io/public/images/wechat.jpg"
+    #- icon: fa-weibo
+     # link: "http://weibo.com/u/2830658314"
+    #- icon: fa-twitter
+     # link: "https://twitter.com/akulubala"
     - icon: fa-github
-      link: "https://github.com/akulubala"
-    - icon: fa-stack-overflow
-      link: "http://stackoverflow.com/users/1364309"
+      link: "https://github.com/mumufeixia"
+   # - icon: fa-stack-overflow
+     # link: "http://stackoverflow.com/users/1364309"
 root: /  
 layout : null
 # Links to include in top navigation
