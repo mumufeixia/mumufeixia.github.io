@@ -9,7 +9,3 @@
 * highlight code
 * Disqus comment
 * Google analytics
-
-#### Screenshot
-
-![Screenshot Post Page](https://akulubala.github.io/public/images/preview.png  "Screenshot home Page")
