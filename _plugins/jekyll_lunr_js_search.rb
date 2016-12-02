@@ -42,7 +42,7 @@ module Jekyll
         
         index << {
           :title => entry.title, 
-          :url => "http://akulubala.github.io/"+entry.url,
+          :url => "http://mumufeixia.github.io/"+entry.url,
           :date => entry.date,
           :categories => entry.categories,
           :body => entry.body
