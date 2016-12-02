@@ -33,8 +33,6 @@ layout : null
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Mysql
-    url : posts/mysql.html
   - title: Git
     url : posts/git.html
   - title: Linux
